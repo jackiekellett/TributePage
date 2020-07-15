@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Merriweather&family=Muli:wght@300;669&display=swap');
+
+:root {
+  --milk: #EDE8C4;
+  --girlblunt: #2B421B;
+  --rollcall: #0C0D08;
+  --attitude: #940D11;
+}
+
+html {
+  background: var(--milk);
+}
+
+main {
+  font-family: 'Merriweather', serif;
+  color: var(--rollcall);
+}
+
+h1 {
+  font-family: 'Black Ops One';
+  font-size: 5rem;
+  color: var(--girlblunt);
+  margin: 0;
+}
+
+.container-1 {
+  display: grid;
+  padding: 0 0;
+  margin: 0 0;
+  grid-template-areas:
+    'image image image image image'
+    'bio bio bio bio music';
+}
+
+#img-div {
+  grid-area: image;
+}
+
+#img-div img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+#img-div figcaption {
+  color: var(--girlblunt);
+  font-size: 0.85rem;
+}
+
+#img-div figcaption a {
+  text-decoration: none;
+  color: var(--attitude);
+}
+
+#tribute-info {
+  grid-area: bio;
+  color: var(--rollcall);
+  font-size: 1.03rem;
+  max-width: 90%;
+  margin: 0 0 0 15px;
+}
+
+#tribute-info a {
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  color: var(--attitude);
+  font-size: 1.1rem;
+}
+
+.music {
+  grid-area: music;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-evenly;
+}
+
+.badge {
+  width: 95%;
+  text-align: left;
+  font-size: 1.4rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--milk);
+  border-radius: 5px;
+  margin: 10px 5px;
+  padding: 5px 15px;
+  background-color: var(--girlblunt);
+  font-family: 'Muli', sans-serif;
+  font-weight: 669;
+  box-shadow: 0 0 5px var(--girlblunt);
+}
+
+.badge a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: var(--rollcall);
+  padding: 5px 5px;
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+}
+
+@media (max-width:700px) {
+  .container-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #tribute-info {
+    margin: 0 25px;
+  }
+  
+  .music {
+    margin: 5px auto;
+    width: 50%;
+    text-align: center;
+  }
+  
+}
+
+@media (max-width:500px) {
+  
+  h1 {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  
+  .music {
+    margin: 5px auto;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .badge {
+    font-size: 1.4rem;
+  }
+}
